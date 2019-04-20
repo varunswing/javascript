@@ -5,7 +5,11 @@ class Person{
         this.birthday = new Date(dob);
     }
 
-    greeting(){
+    greeting () {
+        return `Hello there ${this.firstName} ${this.lastName}!`;
+    }
+
+    calculateAge(){
         const diff = Date.now() - this.birthday.getTime();
         const ageDate = new Date(diff);
         return Math.abs(ageDate.getUTCFullYear() - 1970);
